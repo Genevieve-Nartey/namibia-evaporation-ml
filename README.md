@@ -99,12 +99,15 @@ Raw CSV → EDA & Visualisation → Feature Selection → Scaling → ML Models 
 
 ---
 
+## 📓 Interactive Notebook
+▶ Run this project live on Kaggle: [Open in Kaggle](https://www.kaggle.com/code/genevievenartey/evaporation-analysis-demo/edit/run/300161191)
+
 ## How to Run
 
 ### 1. Clone & install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/namibia-evaporation-ml.git
+git clone https://github.com/Genevieve-Nartey/namibia-evaporation-ml.git
 cd namibia-evaporation-ml
 
 python -m venv venv
