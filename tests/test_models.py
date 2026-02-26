@@ -1,6 +1,7 @@
 """
 Tests for src/models.py
 """
+
 import numpy as np
 import pandas as pd
 import pytest
@@ -23,6 +24,7 @@ def synthetic_data():
     y = pd.Series(2 * X["d2m"] + 3 * X["t2m"], name="mer")
 
     from src.preprocessing import scale_features, split_data
+
     X_train, X_test, y_train, y_test = split_data(X, y)
     X_train_s, X_test_s, _ = scale_features(X_train, X_test)
     return X, y, X_train_s, X_test_s, y_train, y_test

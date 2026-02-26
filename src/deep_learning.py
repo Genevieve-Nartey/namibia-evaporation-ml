@@ -42,9 +42,7 @@ def build_mlp(input_dim: int, use_linear_output: bool = True):
         from tensorflow.keras.layers import Dense
         from tensorflow.keras.models import Sequential
     except ImportError:
-        raise ImportError(
-            "TensorFlow is not installed. Run: pip install tensorflow"
-        )
+        raise ImportError("TensorFlow is not installed. Run: pip install tensorflow")
 
     output_activation = "linear" if use_linear_output else "sigmoid"
 
@@ -60,9 +58,7 @@ def build_mlp(input_dim: int, use_linear_output: bool = True):
         loss="mean_squared_error",
         metrics=["mse", "mae"],
     )
-    logger.info(
-        "Built MLP: input_dim=%d, output_activation=%s", input_dim, output_activation
-    )
+    logger.info("Built MLP: input_dim=%d, output_activation=%s", input_dim, output_activation)
     return model
 
 

@@ -173,9 +173,7 @@ def train_decision_tree(
     cv_mse = -cv_scores.mean()
     logger.info("Decision Tree CV MSE (k=%d): %.4e", cv_folds, cv_mse)
 
-    result = _evaluate(
-        "Decision Tree", y_test.values, y_pred, cv_mse=cv_mse
-    )
+    result = _evaluate("Decision Tree", y_test.values, y_pred, cv_mse=cv_mse)
     _plot_actual_vs_predicted(y_test.values, y_pred, result, save=save_plot)
     return result
 
@@ -275,13 +273,19 @@ def train_all_models(
         train_linear_regression(X_train, X_test, y_train, y_test),
         train_decision_tree(X, y, X_train, X_test, y_train, y_test),
         train_random_forest(
-            X_train, X_test, y_train, y_test,
+            X_train,
+            X_test,
+            y_train,
+            y_test,
             n_estimators_grid=cfg.get("random_forest", {}).get(
                 "n_estimators_grid", [10, 50, 100, 200, 500]
             ),
         ),
         train_knn(
-            X_train, X_test, y_train, y_test,
+            X_train,
+            X_test,
+            y_train,
+            y_test,
             n_neighbors=cfg.get("knn", {}).get("n_neighbors", 3),
         ),
     ]

@@ -72,9 +72,12 @@ def run_pipeline(config: dict, stage: str = "all") -> None:
     if stage in ("train", "evaluate", "all"):
         logger.info("=== Stage: Training ML Models ===")
         comparison = train_all_models(
-            X, y,
-            X_train_scaled, X_test_scaled,
-            y_train, y_test,
+            X,
+            y,
+            X_train_scaled,
+            X_test_scaled,
+            y_train,
+            y_test,
             config=model_cfg,
         )
         print("\n" + "=" * 60)
@@ -85,8 +88,10 @@ def run_pipeline(config: dict, stage: str = "all") -> None:
         if model_cfg.get("run_deep_learning", False):
             logger.info("=== Stage: Deep Learning (TensorFlow) ===")
             from src.deep_learning import train_mlp
+
             result = train_mlp(
-                X, y,
+                X,
+                y,
                 epochs=model_cfg.get("deep_learning", {}).get("epochs", 50),
                 use_linear_output=True,
             )

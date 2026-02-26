@@ -93,9 +93,7 @@ def scale_features(
         If scaler_type is not one of the supported values.
     """
     if scaler_type not in _SCALER_MAP:
-        raise ValueError(
-            f"Unknown scaler '{scaler_type}'. Choose from: {list(_SCALER_MAP.keys())}"
-        )
+        raise ValueError(f"Unknown scaler '{scaler_type}'. Choose from: {list(_SCALER_MAP.keys())}")
 
     scaler_cls = _SCALER_MAP[scaler_type]
     scaler = scaler_cls()

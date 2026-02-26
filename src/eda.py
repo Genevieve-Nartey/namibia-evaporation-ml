@@ -117,9 +117,7 @@ def _distribution_plots(df: pd.DataFrame, save: bool = True) -> None:
     plt.close(fig)
 
 
-def _scatter_plots_vs_target(
-    df: pd.DataFrame, target: str = "mer", save: bool = True
-) -> None:
+def _scatter_plots_vs_target(df: pd.DataFrame, target: str = "mer", save: bool = True) -> None:
     """Plot scatter plots of each feature against the target variable."""
     feature_cols = [c for c in VARIABLE_LABELS if c != target and c in df.columns]
     n = len(feature_cols)

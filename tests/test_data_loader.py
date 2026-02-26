@@ -1,6 +1,7 @@
 """
 Tests for src/data_loader.py
 """
+
 import io
 from pathlib import Path
 
