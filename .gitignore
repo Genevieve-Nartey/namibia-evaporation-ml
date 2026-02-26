@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.env/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_metadata
+
+# Data (large files — keep raw data out of git)
+# Comment out if your dataset is small and you want to include it
+# data/
+
+# Reports / generated outputs
+reports/figures/*.png
+reports/figures/*.pdf
+
+# ML artefacts
+*.pkl
+*.joblib
+*.h5
+*.keras
+mlruns/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env

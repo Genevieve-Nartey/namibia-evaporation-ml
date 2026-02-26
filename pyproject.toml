@@ -1,0 +1,19 @@
+[project]
+name = "namibia-evaporation-ml"
+version = "1.0.0"
+description = "ML pipeline predicting soil evaporation rates in Northern Namibia"
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "I", "N", "W"]
+ignore = ["E501"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

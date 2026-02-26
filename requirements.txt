@@ -1,0 +1,25 @@
+# Core data science
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.4.2
+scipy==1.13.0
+
+# Visualisation
+matplotlib==3.8.4
+seaborn==0.13.2
+plotly==5.22.0
+
+# Deep learning (optional — only needed for src/deep_learning.py)
+tensorflow==2.16.1
+
+# Config
+pyyaml==6.0.1
+
+# Notebook
+jupyter==1.0.0
+ipykernel==6.29.4
+
+# Dev tooling
+pytest==8.2.0
+ruff==0.4.4
+black==24.4.2

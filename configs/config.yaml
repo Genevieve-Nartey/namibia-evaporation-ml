@@ -1,0 +1,36 @@
+# configs/config.yaml
+# -----------------------------------------------------------
+# Central configuration for the Namibia Evaporation ML pipeline.
+# Override any value here rather than editing source code.
+# -----------------------------------------------------------
+
+data:
+  raw_path: "data/raw/north-namibian-monthly-soil.csv"
+
+preprocessing:
+  test_size: 0.2
+  random_state: 0
+  # Options: standard | minmax | robust
+  scaler: "standard"
+
+models:
+  run_deep_learning: false  # set to true to also run TensorFlow MLP
+
+  random_forest:
+    n_estimators_grid: [10, 50, 100, 200, 500]
+    random_state: 0
+
+  knn:
+    n_neighbors: 3
+
+  decision_tree:
+    cv_folds: 5
+    random_state: 0
+
+  deep_learning:
+    epochs: 50
+    batch_size: 32
+    use_linear_output: true  # recommended; sigmoid is scientifically incorrect here
+
+reports:
+  figures_dir: "reports/figures"
