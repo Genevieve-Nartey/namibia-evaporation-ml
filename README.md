@@ -75,13 +75,9 @@ Raw CSV → EDA & Visualisation → Feature Selection → Scaling → ML Models 
 
 ### Model Comparison
 
-| Model | MSE | RMSE | R² |
-|-------|-----|------|----|
-| Linear Regression | ~6.8×10⁻³¹ | ~8.3×10⁻¹⁶ | **1.00** |
-| Decision Tree (CV) | ~6.9×10⁻¹⁴ | — | **1.00** |
-| Random Forest (n=100) | ~1.98×10⁻¹⁴ | ~1.4×10⁻⁷ | **0.9999** |
-| KNN (k=3) | ~5.7×10⁻¹¹ | ~4.3×10⁻⁶ | **1.00** |
-| TensorFlow MLP | 3.81×10⁻¹⁰ | — | — |
+| **All models R²** | ~0.94–0.97 across all models |
+| **Best classical model** | Linear Regression (MSE ≈ 4.63×10⁻¹², R² = 0.97) |
+| **Deep learning** | TF MLP — MSE ≈ 4.65×10⁻², MAE ≈ 1.71×10⁻¹ over 50 epochs |
 
 ### Key Correlations with Evaporation Rate
 
