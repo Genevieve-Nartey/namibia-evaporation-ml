@@ -9,7 +9,6 @@ import pytest
 
 from src.data_loader import FEATURE_COLS, TARGET_COL, get_features_and_target, load_data
 
-
 SAMPLE_CSV = """,date,d2m,t2m,mer,mtdwswrf,mtpr,stl1,swvl1
 0,1959-01-01,281.45,298.14,-2.018e-05,482.14,2.157e-05,302.49,0.115
 1,1959-02-01,284.85,295.80,-3.196e-05,461.00,3.969e-05,298.59,0.185
